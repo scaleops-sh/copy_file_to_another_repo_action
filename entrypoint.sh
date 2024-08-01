@@ -76,6 +76,7 @@ then
   		exit 1
   	fi
   	echo "Retrying attempt $counter"
+    git pull --rebase
   	counter=$[$counter + 1]
   done
   
