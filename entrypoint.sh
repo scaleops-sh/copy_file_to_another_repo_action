@@ -62,6 +62,6 @@ else
       exit 1
     fi
     echo "Retrying attempt $counter"
-    git pull --rebase
+    git pull -s recursive -X theirs
   done
 fi
