@@ -29,7 +29,7 @@ echo "Copying contents to git repo"
 mkdir -p "$CLONE_DIR/$INPUT_DESTINATION_FOLDER"
 if [ -n "$INPUT_USE_RSYNC" ]; then
   echo "rsync mode detected"
-  rsync -avrh "$INPUT_SOURCE_FILE" "$DEST_COPY"
+  rsync -avrh --delete "$INPUT_SOURCE_FILE" "$DEST_COPY"
 else
   cp -R "$INPUT_SOURCE_FILE" "$DEST_COPY"
 fi
